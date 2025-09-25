@@ -3,10 +3,10 @@ services:
   db:
     image: postgres:15
     container_name: postgres_db
-    restart: always
+    restart: unless-stopped
     environment:
-      POSTGRES_USER: usuario
-      POSTGRES_PASSWORD: password
+      POSTGRES_USER: gaa
+      POSTGRES_PASSWORD: 12345
       POSTGRES_DB: mi_basedatos
     ports:
       - "5432:5432"
